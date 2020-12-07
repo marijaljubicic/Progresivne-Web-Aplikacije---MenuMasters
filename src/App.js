@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Recipe from './Recipe'
 import './App.css'
-<<<<<<< HEAD
 
 console.log(process.env)
 
 const App = () => {
   // const APP_ID ="63dd722f";
   // const APP_KEY ="f44ec973bf63c9e5a7be5e50e002eb54";
-=======
-
-const App = () => {
->>>>>>> 26b0f5b42e406f589939af9d7856ceb54cd9f558
   const APP_ID = process.env.REACT_APP_API_ID
   const APP_KEY = process.env.REACT_APP_API_KEY
 
@@ -59,11 +54,7 @@ const App = () => {
       <div className="recipes">
         {recipes.map((recipe) => (
           <Recipe
-<<<<<<< HEAD
             key={recipe.recipe.label}
-=======
-            key={recipe.recipe.url}
->>>>>>> 26b0f5b42e406f589939af9d7856ceb54cd9f558
             title={recipe.recipe.label}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
