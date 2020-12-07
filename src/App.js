@@ -2,13 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Recipe from './Recipe'
 import './App.css'
 
-console.log(process.env)
-
 const App = () => {
-  // const APP_ID ="63dd722f";
-  // const APP_KEY ="f44ec973bf63c9e5a7be5e50e002eb54";
-  const APP_ID = process.env.REACT_APP_API_KEY
-  const APP_KEY = process.env.REACT_APP_API_ID
+  const APP_ID = process.env.REACT_APP_API_ID
+  const APP_KEY = process.env.REACT_APP_API_KEY
 
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState('')
@@ -54,7 +50,7 @@ const App = () => {
       <div className="recipes">
         {recipes.map((recipe) => (
           <Recipe
-            key={recipe.recipe.label}
+            key={recipe.recipe.url}
             title={recipe.recipe.label}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
